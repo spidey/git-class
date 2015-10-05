@@ -1,15 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 
-#define ONGOING 0
-#define STALEMATE 1
-#define X_WON 2
-#define O_WON 3
-#define INVALID 4
+#define UNKNOWN 0
+#define ONGOING (1<<0)
+#define STALEMATE (1<<1)
+#define X_WON (1<<2)
+#define O_WON (1<<3)
+#define INVALID (1<<4)
 
 
+static int isValidPlay_(char play);
 static int checkState_(char board[3][3]);
+static int checkRow_(char board[3][3], int row);
+static int checkColumn_(char board[3][3], int column);
+static int checkDiagonal_(char board[3][3], int diagonal);
+static int checkStateFrom3Pos_(char pos1, char pos2, char pos3);
 static void printBoard_(char board[3][3]);
 static const char *stateName_(int state);
 
@@ -22,7 +29,7 @@ main(int argc, char *argv[])
 	char board[3][3];
 	int i;
 	int j;
-	int state;
+	int state = UNKNOWN;
 
 	if (argc != 10)
 	{
@@ -41,10 +48,18 @@ main(int argc, char *argv[])
 		for(j = 0; j < 3; ++j)
 		{
 			board[i][j] = argv[i*3 + j + 1][0];
+			if (!isValidPlay_(board[i][j]))
+			{
+				state = INVALID;
+			}
 		}
 	}
 
-	state = checkState_(board);
+	if (state != INVALID)
+	{
+		state = checkState_(board);
+	}
+
 	printf("Tic Tac Toe board\n");
 	printBoard_(board);
 	printf("state is %s.\n", stateName_(state));
@@ -56,10 +71,136 @@ main(int argc, char *argv[])
 
 /*----------------------------------------------------------------------------*/
 static int
+isValidPlay_(char play)
+{
+	int rc = (NULL != strchr("XO_", play));
+
+	return rc;
+}
+
+
+
+/*----------------------------------------------------------------------------*/
+static int
 checkState_(char board[3][3])
 {
-	(void)board;
-	return INVALID;
+	int state = UNKNOWN;
+	int i;
+
+	for(i = 0; i < 3; ++i)
+	{
+		state |= checkRow_(board, i);
+		state |= checkColumn_(board, i);
+	}
+
+	for(i = 0; i < 2; ++i)
+	{
+		state |= checkDiagonal_(board, i);
+	}
+
+	if (state & INVALID)
+	{
+		state = INVALID;
+	}
+	else if (state & X_WON)
+	{
+		state = X_WON;
+	}
+	else if (state & O_WON)
+	{
+		state = O_WON;
+	}
+	else if (state & ONGOING)
+	{
+		state = ONGOING;
+	}
+	else
+	{
+		state = STALEMATE;
+	}
+
+	return state;
+}
+
+
+
+/*----------------------------------------------------------------------------*/
+static int
+checkRow_(char board[3][3], int row)
+{
+	int state;
+	char pos1 = board[row][0];
+	char pos2 = board[row][1];
+	char pos3 = board[row][2];
+
+	state = checkStateFrom3Pos_(pos1, pos2, pos3);
+	return state;
+}
+
+
+
+/*----------------------------------------------------------------------------*/
+static int
+checkColumn_(char board[3][3], int column)
+{
+	int state;
+	char pos1 = board[0][column];
+	char pos2 = board[1][column];
+	char pos3 = board[2][column];
+
+	state = checkStateFrom3Pos_(pos1, pos2, pos3);
+	return state;
+}
+
+
+
+/*----------------------------------------------------------------------------*/
+static int
+checkDiagonal_(char board[3][3], int diagonal)
+{
+	int state;
+	char pos1 = board[0][0];
+	char pos2 = board[1][1];
+	char pos3 = board[2][2];
+	if (1 == diagonal)
+	{
+		pos1 = board[0][2];
+		pos3 = board[2][0];
+	}
+
+	state = checkStateFrom3Pos_(pos1, pos2, pos3);
+	return state;
+}
+
+
+
+/*----------------------------------------------------------------------------*/
+static int
+checkStateFrom3Pos_(char pos1, char pos2, char pos3)
+{
+	int state = UNKNOWN;
+
+	if (pos1 == pos2 && pos2 == pos3)
+	{
+		if ('X' == pos1)
+		{
+			state = X_WON;
+		}
+		else if ('O' == pos1)
+		{
+			state = O_WON;
+		}
+		else
+		{
+			state = ONGOING;
+		}
+	}
+	else if ('_' == pos1 || '_' == pos2 || '_' == pos3)
+	{
+		state = ONGOING;
+	}
+
+	return state;
 }
 
 
@@ -100,6 +241,7 @@ stateName_(int state)
 		case INVALID:
 			stateName = "invalid";
 			break;
+		case UNKNOWN:
 		default:
 			stateName = "unknown";
 			break;
