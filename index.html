@@ -1,42 +1,40 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="UTF-8">
     <title>Git-class by spidey</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">Git-class</h1>
-        <p class="header">Repository of weird and not so practical (although very common) git commits, to be messed up in Git classes.</p>
+    <section class="page-header">
+      <h1 class="project-name">Git-class</h1>
+      <h2 class="project-tagline">Repository of weird and not so practical (although very common) git commits, to be messed with in Git classes.</h2>
+      <a href="https://github.com/spidey/git-class" class="btn">View on GitHub</a>
+      <a href="https://github.com/spidey/git-class/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/spidey/git-class/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/spidey/git-class/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/spidey/git-class/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/spidey/git-class">View On GitHub</a></li>
-        </ul>
-
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/spidey">spidey</a></p>
-
-
-      </header>
-      <section>
-        <h1>
+    <section class="main-content">
+      <h1>
 <a id="git-class" class="anchor" href="#git-class" aria-hidden="true"><span class="octicon octicon-link"></span></a>Git Class</h1>
 
 <p>O objetivo dessas aulas é apresentar e exercitar alguns comandos intermediários do Git, assim como ensinar a identificar e melhorar os commits de cada participante. Dessa forma, construimos projetos mais organizados ao aumentarmos a granularidade dos ajustes submetidos ao controle de versão.</p>
 
+<p>Acesso rápido:</p>
+
+<ul>
+<li><a href="#Aula1">Aula 1</a></li>
+<li><a href="#Aula2">Aula 2</a></li>
+</ul>
+
+<hr>
+
 <h2>
-<a id="aula-1---qual-o-contrário-do-git-commit---amend-conheça-o-git-reset-head" class="anchor" href="#aula-1---qual-o-contr%C3%A1rio-do-git-commit---amend-conhe%C3%A7a-o-git-reset-head" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aula 1 - Qual o contrário do <code>git commit --amend</code>? Conheça o <code>git reset HEAD~</code>!</h2>
+<a id="aula-1---qual-o-contrário-do-git-commit---amend-conheça-o-git-reset-head" class="anchor" href="#aula-1---qual-o-contr%C3%A1rio-do-git-commit---amend-conhe%C3%A7a-o-git-reset-head" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="Aula1"></a>Aula 1 - Qual o contrário do <code>git commit --amend</code>? Conheça o <code>git reset HEAD~</code>!</h2>
 
 <p>Nessa aula conheceremos e aprenderemos a utilizar o comando <code>git reset</code> para reverter o último commit, possibilitando a alteração dos arquivos a serem commitados.</p>
 
@@ -45,16 +43,21 @@
 
 <p>Aqui conheceremos o modo interativo do comando <code>git add</code>, que nos possibilita ter um controle maior sobre o que será commitado, o que está adicionado, o que ainda não está sendo versionado.</p>
 
+<hr>
+
 <h2>
-<a id="aula-2---git-rebase--i-modo-interativo-para-ter-ainda-mais-controle-sobre-seus-branches" class="anchor" href="#aula-2---git-rebase--i-modo-interativo-para-ter-ainda-mais-controle-sobre-seus-branches" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aula 2 - <code>git rebase -i</code>: modo interativo para ter ainda mais controle sobre seus branches</h2>
+<a id="aula-2---git-rebase--i-modo-interativo-para-ter-ainda-mais-controle-sobre-seus-branches" class="anchor" href="#aula-2---git-rebase--i-modo-interativo-para-ter-ainda-mais-controle-sobre-seus-branches" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="Aula2"></a>Aula 2 - <code>git rebase -i</code>: modo interativo para ter ainda mais controle sobre seus branches</h2>
 
 <p>Utilizaremos a ferramenta de <code>rebase</code> do git para evitar conflitos quando formos entregar um feature branch. Aprenderemos o modo interativo, que nos permite reordenar, remover, editar e até juntar commits, criando commits mais relevantes, entregas com granularidade na medida certa.</p>
-      </section>
-      <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/spidey/git-class">Git-class</a> is maintained by <a href="https://github.com/spidey">spidey</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
+
+    </section>
+
+  
   </body>
 </html>
