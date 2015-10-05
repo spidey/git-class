@@ -4,51 +4,51 @@
 static int basicIntegerCalculator_(int a, char op, int b);
 
 int main(int argc, char *argv[]){
-	int a;
-	int b;
-	int result;
-	char op;
+    int a;
+    int b;
+    int result;
+    char op;
 
-	if (argc != 4) {
-		printf("Invalid parameters. Usage:\n");
-		printf("scalc <operand> <operator> <operand>\n");
-		printf("operand should be integers, and operator one of +, -, *"
-								    " or /.\n");
-		exit(1);
-	}
-	
-	a = atoi(argv[1]);
-	op = argv[2][0];
-	b = atoi(argv[3]);
-	result = basicIntegerCalculator_(a, op, b);
+    if (argc != 4) {
+        printf("Invalid parameters. Usage:\n");
+        printf("scalc <operand> <operator> <operand>\n");
+        printf("operand should be integers, and operator one of +, -, *"
+                                    " or /.\n");
+        exit(1);
+    }
 
-	printf("%d\n", result);
-	return 0;
+    a = atoi(argv[1]);
+    op = argv[2][0];
+    b = atoi(argv[3]);
+    result = basicIntegerCalculator_(a, op, b);
+
+    printf("%d\n", result);
+    return 0;
 }
 
 static int basicIntegerCalculator_(int a, char op, int b) {
-	int result;
+    int result;
 
-	switch(op) {
-		case '+':
-			result = a+b;
-			break;
-		case '-':
-			result = a-b;
-			break;
-		case '*':
-			result = a*b;
-			break;
-		case '/':
-			if (b != 0) {
-				result = a/b;
-				break;
-			}
-		default:
-			printf("Invalid operation!\n");
-			exit(2);
-	}
+    switch(op) {
+        case '+':
+            result = a+b;
+            break;
+        case '-':
+            result = a-b;
+            break;
+        case '*':
+            result = a*b;
+            break;
+        case '/':
+            if (b != 0) {
+                result = a/b;
+                break;
+            }
+        default:
+            printf("Invalid operation!\n");
+            exit(2);
+    }
 
-	return result;
+    return result;
 }
 
