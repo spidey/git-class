@@ -1,0 +1,3 @@
+05/10/2015
+scalc 1.0 - Primeira versão com suporte as funções básicas da matemática
+ttt 0.9 - Ainda com implementação dummy
