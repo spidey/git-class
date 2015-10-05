@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>Git-class by spidey</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Git-class</h1>
-      <h2 class="project-tagline">Repository of weird and not so practical (although very common) git commits, to be messed with in Git classes.</h2>
-      <a href="https://github.com/spidey/git-class" class="btn">View on GitHub</a>
-      <a href="https://github.com/spidey/git-class/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/spidey/git-class/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <section class="main-content">
-      <h1>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Git-class by spidey</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Git-class</h1>
+        <h2>Repository of weird and not so practical (although very common) git commits, to be messed with in Git classes.</h2>
+        <a href="https://github.com/spidey/git-class" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
 <a id="git-class" class="anchor" href="#git-class" aria-hidden="true"><span class="octicon octicon-link"></span></a>Git Class</h1>
 
 <p>O objetivo dessas aulas é apresentar e exercitar alguns comandos intermediários do Git, assim como ensinar a identificar e melhorar os commits de cada participante. Dessa forma, construimos projetos mais organizados ao aumentarmos a granularidade dos ajustes submetidos ao controle de versão.</p>
@@ -36,36 +45,58 @@
 <h2>
 <a id="aula-1---qual-o-contrário-do-git-commit---amend-conheça-o-git-reset-head" class="anchor" href="#aula-1---qual-o-contr%C3%A1rio-do-git-commit---amend-conhe%C3%A7a-o-git-reset-head" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="Aula1"></a>Aula 1 - Qual o contrário do <code>git commit --amend</code>? Conheça o <code>git reset HEAD~</code>!</h2>
 
-<p>Nessa aula conheceremos e aprenderemos a utilizar o comando <code>git reset</code> para reverter o último commit, possibilitando a alteração dos arquivos a serem commitados.
-Referências:
-<a href="https://git-scm.com/book/pt-br/v1/Ferramentas-do-Git-Reescrevendo-o-Hist%C3%B3rico#Dividindo-um-Commit">Utilizando o <code>git reset</code> para reverter o último commit</a>
-<a href="https://git-scm.com/docs/git-reset">Manual do <code>git reset</code></a></p>
+<p>Nessa aula conheceremos e aprenderemos a utilizar o comando <code>git reset</code> para reverter o último commit, possibilitando a alteração dos arquivos a serem commitados.</p>
+
+<p>Referências:</p>
+
+<ul>
+<li><a href="https://git-scm.com/book/pt-br/v1/Ferramentas-do-Git-Reescrevendo-o-Hist%C3%B3rico#Dividindo-um-Commit">Utilizando o <code>git reset</code> para reverter o último commit</a></li>
+<li><a href="https://git-scm.com/docs/git-reset">Manual do <code>git reset</code></a></li>
+</ul>
 
 <h3>
 <a id="aula-1-parte-2---que-tal-commitar-apenas-um-pedaço-de-um-arquivo-git-add--i-e--p-ao-resgate" class="anchor" href="#aula-1-parte-2---que-tal-commitar-apenas-um-peda%C3%A7o-de-um-arquivo-git-add--i-e--p-ao-resgate" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aula 1, Parte 2 - Que tal commitar apenas um pedaço de um arquivo? <code>git add -i</code> e <code>-p</code> ao resgate!</h3>
 
-<p>Aqui conheceremos o modo interativo do comando <code>git add</code>, que nos possibilita ter um controle maior sobre o que será commitado, o que está adicionado, o que ainda não está sendo versionado.
-Referência:
-<a href="https://git-scm.com/book/pt-br/v1/Ferramentas-do-Git-%C3%81rea-de-Sele%C3%A7%C3%A3o-Interativa">Utilizando o <code>git add</code> interativo</a>
-<a href="https://git-scm.com/docs/git-add">Manual do <code>git add</code></a></p>
+<p>Aqui conheceremos o modo interativo do comando <code>git add</code>, que nos possibilita ter um controle maior sobre o que será commitado, o que está adicionado, o que ainda não está sendo versionado.</p>
+
+<p>Referências:</p>
+
+<ul>
+<li><a href="https://git-scm.com/book/pt-br/v1/Ferramentas-do-Git-%C3%81rea-de-Sele%C3%A7%C3%A3o-Interativa">Utilizando o <code>git add</code> interativo</a></li>
+<li><a href="https://git-scm.com/docs/git-add">Manual do <code>git add</code></a></li>
+</ul>
 
 <hr>
 
 <h2>
 <a id="aula-2---git-rebase--i-modo-interativo-para-ter-ainda-mais-controle-sobre-seus-branches" class="anchor" href="#aula-2---git-rebase--i-modo-interativo-para-ter-ainda-mais-controle-sobre-seus-branches" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="Aula2"></a>Aula 2 - <code>git rebase -i</code>: modo interativo para ter ainda mais controle sobre seus branches</h2>
 
-<p>Utilizaremos a ferramenta de <code>rebase</code> do git para evitar conflitos quando formos entregar um feature branch. Aprenderemos o modo interativo, que nos permite reordenar, remover, editar e até juntar commits, criando commits mais relevantes, entregas com granularidade na medida certa.
-Referências:
-<a href="https://git-scm.com/book/pt-br/v1/Ferramentas-do-Git-Reescrevendo-o-Hist%C3%B3rico">Utilizando o <code>git rebase</code> para editar o histórico</a>
-<a href="https://git-scm.com/docs/git-rebase">Manual do <code>git rebase</code></a></p>
+<p>Utilizaremos a ferramenta de <code>rebase</code> do git para evitar conflitos quando formos entregar um feature branch. Aprenderemos o modo interativo, que nos permite reordenar, remover, editar e até juntar commits, criando commits mais relevantes, entregas com granularidade na medida certa.</p>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/spidey/git-class">Git-class</a> is maintained by <a href="https://github.com/spidey">spidey</a>.</span>
+<p>Referências:</p>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+<ul>
+<li><a href="https://git-scm.com/book/pt-br/v1/Ferramentas-do-Git-Reescrevendo-o-Hist%C3%B3rico">Utilizando o <code>git rebase</code> para editar o histórico</a></li>
+<li><a href="https://git-scm.com/docs/git-rebase">Manual do <code>git rebase</code></a></li>
+</ul>
+        </section>
 
-    </section>
+        <aside id="sidebar">
+          <a href="https://github.com/spidey/git-class/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/spidey/git-class/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/spidey/git-class"></a> is maintained by <a href="https://github.com/spidey">spidey</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
 
   
   </body>
