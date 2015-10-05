@@ -30,16 +30,13 @@ O objetivo dessas aulas é apresentar e exercitar alguns comandos intermediário
 <ul>
 <li><a href="#Aula1">Aula 1 - <code>git reset</code> e <code>git add</code></a></li>
 <li><a href="#Aula2">Aula 2 - <code>git rebase</code></a></li>
+<li><a href="#Extra">Exercício Extra</a></li>
 </ul>
 
 <hr>
 
-<hr>
-
-<hr>
-
-<h2>
-<a id="aula-1---qual-o-contrário-do-git-commit---amend-conheça-o-git-reset-head" class="anchor" href="#aula-1---qual-o-contr%C3%A1rio-do-git-commit---amend-conhe%C3%A7a-o-git-reset-head" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="Aula1"></a>Aula 1 - Qual o contrário do <code>git commit --amend</code>? Conheça o <code>git reset HEAD~</code>!</h2>
+<h1>
+<a id="aula-1---qual-o-contrário-do-git-commit---amend-conheça-o-git-reset-head" class="anchor" href="#aula-1---qual-o-contr%C3%A1rio-do-git-commit---amend-conhe%C3%A7a-o-git-reset-head" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="Aula1"></a>Aula 1 - Qual o contrário do <code>git commit --amend</code>? Conheça o <code>git reset HEAD~</code>!</h1>
 
 <p>Nessa aula conheceremos e aprenderemos a utilizar o comando <code>git reset</code> para reverter o último commit, possibilitando a alteração dos arquivos a serem commitados.</p>
 
@@ -47,15 +44,14 @@ O objetivo dessas aulas é apresentar e exercitar alguns comandos intermediário
 <li>Branch de trabalho: <a href="https://github.com/spidey/git-class/tree/reset-and-patch">reset-and-patch</a>
 </li>
 <li><a href="https://git-scm.com/book/pt-br/v1/Ferramentas-do-Git-Reescrevendo-o-Hist%C3%B3rico#Dividindo-um-Commit">Utilizando o <code>git reset</code> para reverter o último commit</a></li>
-<li><a href="https://git-scm.com/docs/git-reset">Manual do <code>git reset</code></a></li>
-</ul>
+<li>
+<p><a href="https://git-scm.com/docs/git-reset">Manual do <code>git reset</code></a></p>
 
-<h3>
-<a id="aula-1-parte-2---que-tal-commitar-apenas-um-pedaço-de-um-arquivo-git-add--i-e--p-ao-resgate" class="anchor" href="#aula-1-parte-2---que-tal-commitar-apenas-um-peda%C3%A7o-de-um-arquivo-git-add--i-e--p-ao-resgate" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aula 1, Parte 2 - Que tal commitar apenas um pedaço de um arquivo? <code>git add -i</code> e <code>-p</code> ao resgate!</h3>
+<h2>
+<a id="aula-1-parte-2---que-tal-commitar-apenas-um-pedaço-de-um-arquivo-git-add--i-e--p-ao-resgate" class="anchor" href="#aula-1-parte-2---que-tal-commitar-apenas-um-peda%C3%A7o-de-um-arquivo-git-add--i-e--p-ao-resgate" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aula 1, Parte 2 - Que tal commitar apenas um pedaço de um arquivo? <code>git add -i</code> e <code>-p</code> ao resgate!</h2>
 
 <p>Aqui conheceremos o modo interativo do comando <code>git add</code>, que nos possibilita ter um controle maior sobre o que será commitado, o que está adicionado, o que ainda não está sendo versionado.</p>
-
-<ul>
+</li>
 <li><a href="https://git-scm.com/book/pt-br/v1/Ferramentas-do-Git-%C3%81rea-de-Sele%C3%A7%C3%A3o-Interativa">Utilizando o <code>git add</code> interativo</a></li>
 <li><a href="https://git-scm.com/docs/git-add">Manual do <code>git add</code></a></li>
 </ul>
@@ -64,12 +60,8 @@ O objetivo dessas aulas é apresentar e exercitar alguns comandos intermediário
 
 <hr>
 
-<hr>
-
-<hr>
-
-<h2>
-<a id="aula-2---git-rebase--i-modo-interativo-para-ter-ainda-mais-controle-sobre-seus-branches" class="anchor" href="#aula-2---git-rebase--i-modo-interativo-para-ter-ainda-mais-controle-sobre-seus-branches" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="Aula2"></a>Aula 2 - <code>git rebase -i</code>: modo interativo para ter ainda mais controle sobre seus branches</h2>
+<h1>
+<a id="aula-2---git-rebase--i-modo-interativo-para-ter-ainda-mais-controle-sobre-seus-branches" class="anchor" href="#aula-2---git-rebase--i-modo-interativo-para-ter-ainda-mais-controle-sobre-seus-branches" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="Aula2"></a>Aula 2 - <code>git rebase -i</code>: modo interativo para ter ainda mais controle sobre seus branches</h1>
 
 <p>Utilizaremos a ferramenta de <code>rebase</code> do git para evitar conflitos quando formos entregar um feature branch. Aprenderemos o modo interativo, que nos permite reordenar, remover, editar e até juntar commits, criando commits mais relevantes, entregas com granularidade na medida certa.</p>
 
@@ -82,6 +74,14 @@ O objetivo dessas aulas é apresentar e exercitar alguns comandos intermediário
 
 <p>De quais formas é possível atualizar um feature branch local em relação ao seu branch de origem (<code>develop</code> no caso de uma nova funcionalidade)? Quais as vantagens e desvantagens de cada uma dessas formas?
 Como exercício, identifique um feature branch do POSWEB que recebeu um merge do branch de origem como forma de evitar muitos conflitos no momento de entrega, e refaça o sincronismo utilizando o <code>git rebase</code>. Utilize o <code>git reset</code> e <code>git rebase</code> para te auxiliar nesta tarefa. Não se esqueça de criar branches locais de backup, para não perder as referências originais. Isto é, crie um branch de backup no último commit antes do merge de entrega do feature branch e um antes do commit de merge de atualização do branch principal. Após o trabalho concluído, faça o <code>git diff</code> e compare o resultado final, identificando se existem diferenças entre as duas abordagens de atualização do feature branch.</p>
+
+<hr>
+
+<h1>
+<a id="folder-organization" class="anchor" href="#folder-organization" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="Extra'&gt;&lt;/a&gt;Exerc%C3%ADcio%20Extra&lt;/h1&gt;%0A%0A&lt;p&gt;J%C3%A1%20pensou%20em%20mergear%20uma%20reestrutura%C3%A7%C3%A3o%20das%20pastas%20de%20um%20projeto%20sem%20dor%20de%20cabe%C3%A7a?%20O%20Git%20%C3%A9%20esperto%20o%20suficiente%20para%20identificar%20arquivos%20que%20foram%20apenas%20movidos,%20e%20consegue%20mergear%20modifica%C3%A7%C3%B5es%20neles%20de%20forma%20transparente.%20Utilize%20o%20branch%20&lt;code&gt;folder-organization&lt;/code&gt;%20para%20testar%20essa%20funcionalidade.&lt;/p&gt;%0A%0A&lt;ul&gt;%0A&lt;li&gt;Branch%20de%20trabalho:%20&lt;a%20href=">folder-organization</a>
+
+
+</h1><p>Utilize as técnicas que já discutimos para finalizar a sua cópia do projeto, com todas as lições até agora discutidas. Utilize as duas abordagens de entrega do feature branch, <code>merge</code> e <code>rebase</code>. Aproveite e faça o <code>rebase</code> do <code>folder-organization</code> para o topo e também do topo para o <code>folder-organization</code>. Crie branches de backup para poder comparar o resultado das duas abordagens.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/spidey/git-class">Git-class</a> is maintained by <a href="https://github.com/spidey">spidey</a>.</span>
