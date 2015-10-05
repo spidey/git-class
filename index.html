@@ -22,14 +22,19 @@
       <h1>
 <a id="git-class" class="anchor" href="#git-class" aria-hidden="true"><span class="octicon octicon-link"></span></a>Git Class</h1>
 
-<p>O objetivo dessas aulas é apresentar e exercitar alguns comandos intermediários do Git, assim como ensinar a identificar e melhorar os commits de cada participante. Dessa forma, construimos projetos mais organizados ao aumentarmos a granularidade dos ajustes submetidos ao controle de versão.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="Git">
+O objetivo dessas aulas é apresentar e exercitar alguns comandos intermediários do Git, assim como ensinar a identificar e melhorar os commits de cada participante. Dessa forma, construimos projetos mais organizados ao aumentarmos a granularidade dos ajustes submetidos ao controle de versão.</p>
 
 <p>Acesso rápido:</p>
 
 <ul>
-<li><a href="#Aula1">Aula 1</a></li>
-<li><a href="#Aula2">Aula 2</a></li>
+<li><a href="#Aula1">Aula 1 - <code>git reset</code> e <code>git add</code></a></li>
+<li><a href="#Aula2">Aula 2 - <code>git rebase</code></a></li>
 </ul>
+
+<hr>
+
+<hr>
 
 <hr>
 
@@ -39,6 +44,8 @@
 <p>Nessa aula conheceremos e aprenderemos a utilizar o comando <code>git reset</code> para reverter o último commit, possibilitando a alteração dos arquivos a serem commitados.</p>
 
 <ul>
+<li>Branch de trabalho: <a href="https://github.com/spidey/git-class/tree/reset-and-patch">reset-and-patch</a>
+</li>
 <li><a href="https://git-scm.com/book/pt-br/v1/Ferramentas-do-Git-Reescrevendo-o-Hist%C3%B3rico#Dividindo-um-Commit">Utilizando o <code>git reset</code> para reverter o último commit</a></li>
 <li><a href="https://git-scm.com/docs/git-reset">Manual do <code>git reset</code></a></li>
 </ul>
@@ -53,6 +60,12 @@
 <li><a href="https://git-scm.com/docs/git-add">Manual do <code>git add</code></a></li>
 </ul>
 
+<p>Como exercício, identifique um commit seu no POSWEB/POSNET/porting que poderia ser dividido em um ou mais commits independentes. Crie um branch local, faça o checkout dele, resete o último commit e refaça-o com mais granularidade, utilizando o <code>git add</code> interativo. Revise seu trabalho utilizando o <code>gitk</code>.</p>
+
+<hr>
+
+<hr>
+
 <hr>
 
 <h2>
@@ -61,9 +74,14 @@
 <p>Utilizaremos a ferramenta de <code>rebase</code> do git para evitar conflitos quando formos entregar um feature branch. Aprenderemos o modo interativo, que nos permite reordenar, remover, editar e até juntar commits, criando commits mais relevantes, entregas com granularidade na medida certa.</p>
 
 <ul>
+<li>Branch de trabalho: <a href="https://github.com/spidey/git-class/tree/styling">styling</a>
+</li>
 <li><a href="https://git-scm.com/book/pt-br/v1/Ferramentas-do-Git-Reescrevendo-o-Hist%C3%B3rico">Utilizando o <code>git rebase</code> para editar o histórico</a></li>
 <li><a href="https://git-scm.com/docs/git-rebase">Manual do <code>git rebase</code></a></li>
 </ul>
+
+<p>De quais formas é possível atualizar um feature branch local em relação ao seu branch de origem (<code>develop</code> no caso de uma nova funcionalidade)? Quais as vantagens e desvantagens de cada uma dessas formas?
+Como exercício, identifique um feature branch do POSWEB que recebeu um merge do branch de origem como forma de evitar muitos conflitos no momento de entrega, e refaça o sincronismo utilizando o <code>git rebase</code>. Utilize o <code>git reset</code> e <code>git rebase</code> para te auxiliar nesta tarefa. Não se esqueça de criar branches locais de backup, para não perder as referências originais. Isto é, crie um branch de backup no último commit antes do merge de entrega do feature branch e um antes do commit de merge de atualização do branch principal. Após o trabalho concluído, faça o <code>git diff</code> e compare o resultado final, identificando se existem diferenças entre as duas abordagens de atualização do feature branch.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/spidey/git-class">Git-class</a> is maintained by <a href="https://github.com/spidey">spidey</a>.</span>
