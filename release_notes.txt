@@ -1,4 +1,7 @@
 05/10/2015
+ttt 1.0 - Conclusão da implementação do ttt
+
+05/10/2015
 ttt 0.91 - Correção de bug na leitura do tabuleiro
 
 05/10/2015
