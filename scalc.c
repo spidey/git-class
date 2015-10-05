@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+static int basicIntegerCalculator_(int a, char op, int b);
 
 
 /*----------------------------------------------------------------------------*/
@@ -23,6 +24,14 @@ main(int argc, char *argv[])
 	a = atoi(argv[1]);
 	op = argv[2][0];
 	b = atoi(argv[3]);
+	result = basicIntegerCalculator_(a, op, b);
+
+	printf("%d\n", result);
+	return 0;
+}
+
+static int basicIntegerCalculator_(int a, char op, int b) {
+	int result;
 
 	switch(op)
 	{
@@ -45,8 +54,7 @@ main(int argc, char *argv[])
 			printf("Invalid operation!\n");
 			exit(2);
 	}
-	
-	printf("%d\n", result);
-	return 0;
+
+	return result;
 }
 
