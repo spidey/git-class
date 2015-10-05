@@ -2,21 +2,17 @@
 #include <stdlib.h>
 
 
-
-/*----------------------------------------------------------------------------*/
-int
-main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]){
 	int a;
 	int b;
 	int result;
 	char op;
 
-	if (argc != 4)
-	{
+	if (argc != 4) {
 		printf("Invalid parameters. Usage:\n");
 		printf("scalc <operand> <operator> <operand>\n");
-		printf("operand should be integers, and operator one of +, -, * or /.\n");
+		printf("operand should be integers, and operator one of +, -, *"
+								    " or /.\n");
 		exit(1);
 	}
 	
@@ -24,8 +20,7 @@ main(int argc, char *argv[])
 	op = argv[2][0];
 	b = atoi(argv[3]);
 
-	switch(op)
-	{
+	switch(op) {
 		case '+':
 			result = a+b;
 			break;
@@ -36,8 +31,7 @@ main(int argc, char *argv[])
 			result = a*b;
 			break;
 		case '/':
-			if (b != 0)
-			{
+			if (b != 0) {
 				result = a/b;
 				break;
 			}
