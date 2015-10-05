@@ -40,7 +40,7 @@ main(int argc, char *argv[])
 	{
 		for(j = 0; j < 3; ++j)
 		{
-			board[i][j] = argv[i*3 + j][0];
+			board[i][j] = argv[i*3 + j + 1][0];
 		}
 	}
 
