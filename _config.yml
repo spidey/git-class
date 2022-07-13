@@ -1,0 +1,8 @@
+title: Git-class
+description: Repository of weird and not so practical (although very common) git commits, to be messed with in Git classes.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
